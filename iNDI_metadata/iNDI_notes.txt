@@ -1,0 +1,9 @@
+I have an xlsx file with multiple tabs about theiNDI cell lines called "./iNDI_metadata/IPSC Data 6-18-2025 13-15.xlsx".
+From the tab "BackgroundInfo" " I'd like to extract the following columns and skip the second row while reading in the file:
+Product Code	Parental Line (D365)	Gene (D365)	Gene Variant (D365)	Genotype (D365)	dbSNP	Condition	Other Names	Genome Assembly	Protospacer Sequence	Genomic Coordinate	Genomic Sequence
+These extracted columns should start a new data frame.
+Using the tab in the workbook called DiseaseList, please replace the content of Condition in the data frame with the content of the corresponding geneticCondition column from this tab, matching to the geneticConditionId column also in this tab.
+Then make a new column in the data from called "Procurement link" the content of this entire column should be "https://www.jax.org/jax-mice-and-services/ipsc/cells-collection".
+Next, using claude sonnet 4, populate a new column called "About this gene" in which based on the "Gene (D365)" column there is a summary of that gene's implications in neurodegenerative diseases from the web including citations, no more than a paragraph in length.  If missing, just write "N/A".
+Also, using claude sonnet 4, populate a new column called "About this variant" in which based on the "dbSNP (D365)" column there is a summary of that variant's implications in neurodegenerative diseases from the web including citations, no more than a paragraph in length. If missing, just write "N/A".
+Finally export this to a timestamped file called "iNDI_inventory" that is tab delimited after removing the " (D365)" suffixes from the column headers.

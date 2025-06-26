@@ -1,4 +1,4 @@
-# CARD Catalogue
+# CARD Catalogue [beta]
 
 A FAIR browser for publicly available and controlled access Alzheimer's disease studies with AI-powered insights.
 
